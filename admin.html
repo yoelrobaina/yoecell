@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panel de administración | YoeCell</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0b1017">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/sora-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="admin">
+
+<div class="login-screen" id="admin-login" hidden>
+  <div class="login-card">
+    <a class="brand" href="/index.html" style="margin-bottom:1.4rem">
+      <svg class="brand__mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <rect x="13.5" y="3" width="21" height="42" rx="5.5" stroke="url(#yoecellAdmin)" stroke-width="2.2"/>
+        <path d="M21.5 13.5 29 25h-4.6l3.6 7.4-8.2-12h4.4L21.5 13.5z" fill="url(#yoecellAdmin)"/>
+        <defs><linearGradient id="yoecellAdmin" x1="13" y1="3" x2="35" y2="45" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#00B8FF"/><stop offset="1" stop-color="#5A5BFF"/>
+        </linearGradient></defs>
+      </svg>
+      <span class="brand__text">
+        <span class="brand__name">YoeCell</span>
+        <span class="brand__sub">Panel de administración</span>
+      </span>
+    </a>
+    <h1>Acceso restringido</h1>
+    <p>Introduce la contraseña del administrador para gestionar productos, precios, ofertas e inventario.</p>
+    <form id="login-form" autocomplete="off">
+      <div class="field">
+        <label class="field__label" for="login-password">Contraseña</label>
+        <input class="input" id="login-password" type="password" name="password" required autocomplete="current-password" placeholder="••••••••">
+        <p class="field__error" id="login-error" role="alert"></p>
+      </div>
+      <button class="btn btn--signal btn--block" type="submit" id="login-submit">Entrar al panel</button>
+      <p class="field__hint">La contraseña se valida en el servidor y nunca se guarda en el navegador.</p>
+    </form>
+  </div>
+</div>
+
+<div id="admin-app" hidden>
+  <div class="admin__bar">
+    <div class="wrap">
+      <span class="admin__brand">
+        <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <rect x="13.5" y="3" width="21" height="42" rx="5.5" stroke="#00B8FF" stroke-width="2.2"/>
+          <path d="M21.5 13.5 29 25h-4.6l3.6 7.4-8.2-12h4.4L21.5 13.5z" fill="#00B8FF"/>
+        </svg>
+        YoeCell · Panel
+      </span>
+      <span class="admin__tag" id="admin-storage">Comprobando servidor…</span>
+      <span class="admin__spacer"></span>
+      <a class="btn btn--sm btn--ghost-light" href="/index.html" target="_blank" rel="noopener">Ver tienda</a>
+      <button class="btn btn--sm btn--ghost-light" type="button" id="admin-logout">Salir</button>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="admin-shell">
+      <nav class="admin-nav" id="admin-nav" aria-label="Secciones del panel">
+        <button class="admin-nav__item" type="button" data-view="dashboard" aria-current="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5"/><path d="M4 19h16"/><rect x="7" y="11" width="3" height="5"/><rect x="12" y="8" width="3" height="8"/><rect x="17" y="13" width="3" height="3"/></svg>
+          Resumen
+        </button>
+        <button class="admin-nav__item" type="button" data-view="products">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg>
+          Productos
+        </button>
+        <button class="admin-nav__item" type="button" data-view="categories">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h7l9 9-7 7-9-9V4z"/><circle cx="8.5" cy="8.5" r="1.4"/></svg>
+          Categorías
+        </button>
+        <button class="admin-nav__item" type="button" data-view="offers">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12.5 12.5 20 4 11.5V4h7.5L20 12.5z"/><circle cx="8.5" cy="8.5" r="1.2"/></svg>
+          Ofertas
+        </button>
+        <button class="admin-nav__item" type="button" data-view="inventory">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 8 12 3.5 20.5 8v8L12 20.5 3.5 16V8z"/><path d="M3.5 8 12 12.5 20.5 8"/><path d="M12 12.5v8"/></svg>
+          Inventario
+        </button>
+        <button class="admin-nav__item" type="button" data-view="settings">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v2.5M12 18.5V21M21 12h-2.5M5.5 12H3m13.4-6.4-1.8 1.8M9.4 14.6l-1.8 1.8m0-11.8 1.8 1.8m5.2 5.2 1.8 1.8"/></svg>
+          Ajustes
+        </button>
+      </nav>
+      <main id="admin-main"></main>
+    </div>
+  </div>
+</div>
+
+<div class="modal-host" id="admin-modal" data-open="false"></div>
+<script type="module" src="/assets/js/admin.js"></script>
+</body>
+</html>

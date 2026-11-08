@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catálogo de teléfonos | YoeCell</title>
+<meta name="description" content="Explora el catálogo de YoeCell: teléfonos Samsung, Xiaomi, Redmi, Motorola y más. Filtra por marca, precio, memoria, almacenamiento y estado. Compra por WhatsApp.">
+<meta name="theme-color" content="#0b1017">
+<link rel="canonical" href="/catalogo">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="YoeCell">
+<meta property="og:title" content="Catálogo de teléfonos | YoeCell">
+<meta property="og:description" content="Filtra por marca, precio, RAM, almacenamiento y estado. Todos con accesorios incluidos y garantía de 7 días.">
+<meta property="og:image" content="/assets/img/og-default.png">
+<meta property="og:url" content="/catalogo">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/sora-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body data-page="catalogo">
+<a class="skip-link" href="#main">Saltar al contenido</a>
+<div id="app-header"></div>
+
+<main id="main">
+  <section class="page-head">
+    <div class="wrap">
+      <span class="eyebrow">Catálogo</span>
+      <h1 class="page-head__title" id="catalog-title">Todos los teléfonos</h1>
+      <p class="page-head__lead">Equipos nuevos y usados, revisados uno por uno. Filtra por marca, precio, memoria y estado; cada ficha incluye fotos, especificaciones y precio en USD.</p>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="catalog-layout">
+        <aside class="filters" id="filters-panel" data-open="false" aria-label="Filtros del catálogo">
+        </aside>
+
+        <div>
+          <div class="catalog-toolbar">
+            <button class="btn btn--sm btn--outline" id="filters-toggle" type="button">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
+              Filtrar
+            </button>
+            <div class="catalog-search">
+              <span class="catalog-search__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg></span>
+              <label class="visually-hidden" for="catalog-search">Buscar en el catálogo</label>
+              <input class="input" id="catalog-search" type="search" placeholder="Buscar modelo…" autocomplete="off">
+            </div>
+            <div class="catalog-toolbar__spacer"></div>
+            <p class="catalog-toolbar__count" id="catalog-count" aria-live="polite">Cargando catálogo…</p>
+            <label class="visually-hidden" for="catalog-sort">Ordenar productos</label>
+            <select class="select" id="catalog-sort" style="max-width:215px">
+              <option value="destacados">Destacados</option>
+              <option value="price-asc">Precio: menor a mayor</option>
+              <option value="price-desc">Precio: mayor a menor</option>
+              <option value="new">Novedades</option>
+              <option value="offers">Mayor descuento</option>
+              <option value="name">Nombre (A-Z)</option>
+            </select>
+          </div>
+
+          <div class="chips-row" id="catalog-chips"></div>
+
+          <div class="product-grid" id="catalog-grid" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="cta-band">
+        <div>
+          <h2>¿No aparece el modelo que buscas?</h2>
+          <p>Es posible que lo consigamos. Cuéntanos qué necesitas y te digo precio y plazo de entrada.</p>
+        </div>
+        <div class="cta-band__actions">
+          <a class="btn btn--signal btn--lg" data-wa-general="Consulta desde el catálogo" href="#">Escribir por WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="app-footer"></div>
+<div id="app-fab"></div>
+<script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

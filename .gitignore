@@ -1,0 +1,9 @@
+node_modules/
+.env
+.env.local
+.env.*.local
+.img-tmp/
+.vercel
+.DS_Store
+*.log
+npm-debug.log*

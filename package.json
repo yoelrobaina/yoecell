@@ -1,0 +1,25 @@
+{
+  "name": "yoecell",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "YoeCell — tienda de teléfonos móviles y accesorios. Sitio estático sin paso de build, con panel de administración protegido y despliegue en Vercel.",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=18.17"
+  },
+  "scripts": {
+    "start": "node serve.js",
+    "dev": "node serve.js",
+    "images": "node scripts/generate-images.mjs",
+    "images:force": "node scripts/generate-images.mjs --force",
+    "seed": "node scripts/seed-catalog.mjs",
+    "sitemap": "node scripts/generate-sitemap.mjs",
+    "check": "node scripts/check-project.mjs",
+    "test": "node --test",
+    "test:e2e": "node scripts/browser-check.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.65.0"
+  }
+}

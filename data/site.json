@@ -1,0 +1,65 @@
+{
+  "demo": true,
+  "demoNotice": "DATOS DEMO — reemplazar antes de publicar",
+  "business": {
+    "name": "YoeCell",
+    "tagline": "Teléfonos y accesorios con garantía, entrega y alguien que responde en WhatsApp.",
+    "whatsappNumber": "5350000000",
+    "whatsappDisplay": "+53 5 000 0000",
+    "whatsappLabel": "DEMO",
+    "email": "ventas@yoecell.example",
+    "address": "Avenida Central 000, La Habana (DEMO)",
+    "city": "La Habana",
+    "hours": "Lunes a sábado, 9:00 – 19:00",
+    "instagram": "https://instagram.com/yoecell",
+    "facebook": "https://facebook.com/yoecell",
+    "tiktok": "https://tiktok.com/@yoecell"
+  },
+  "cupRate": 240,
+  "cupRateNote": "Tasa de referencia DEMO (1 USD = 240 CUP). El precio en CUP se calcula en el navegador y puede variar.",
+  "payments": [
+    { "id": "usd", "label": "USD", "detail": "Dólares estadounidenses, efectivo o transferencia." },
+    { "id": "cup", "label": "CUP", "detail": "Pesos colombianos, según tasa del día." },
+    { "id": "zelle", "label": "Zelle", "detail": "Desde Estados Unidos, únicamente a nombre del titular de YoeCell." },
+    { "id": "mex", "label": "MEX", "detail": "Transferencia en pesos mexicanos." },
+    { "id": "iban", "label": "IBAN", "detail": "Transferencia bancaria con número de cuenta del negocio." }
+  ],
+  "conditions": {
+    "warranty": "Una semana de garantía por defectos de fábrica en todos los teléfonos.",
+    "warrantyShort": "7 días de garantía",
+    "delivery": "Entrega gratuita dentro de la ciudad. A otros municipios con costo adicional, coordinating por WhatsApp.",
+    "setup": "Si compras en la dirección, configuramos las aplicaciones principales del teléfono antes de la entrega.",
+    "included": [
+      "Cover protector",
+      "Mica protectora",
+      "Cargador, cable y adaptador",
+      "Llave SIM"
+    ]
+  },
+  "faq": [
+    {
+      "q": "¿Qué incluye exactamente la compra de un teléfono?",
+      "a": "Todos los teléfonos se entregan con cover protector, mica protectora, cargador, cable y adaptador, y llave SIM. Los teléfonos usados incluyen además una revisión de funcionamiento al momento de la entrega."
+    },
+    {
+      "q": "¿Cuánto dura la garantía?",
+      "a": "Una semana de garantía por defectos de fábrica desde la entrega. No cubre daños por golpes, humedad ni uso indebido, ni cambios de software no autorizados."
+    },
+    {
+      "q": "¿El precio en CUP es el mismo todos los días?",
+      "a": "No. El precio en USD es el referencia. El equivalente en CUP se calcula con la tasa del día y se confirma por WhatsApp antes de cerrar la compra."
+    },
+    {
+      "q": "¿Hacen entregas a otros municipios?",
+      "a": "Sí. Dentro de la ciudad la entrega es gratuita; a otros municipios se coordina el envío por WhatsApp y se informa el costo antes de confirmar el pedido."
+    },
+    {
+      "q": "¿Puedo pagar con Zelle, MEX o IBAN?",
+      "a": "Sí, son parte de los métodos de pago del negocio. Confirma los datos de pago por WhatsApp antes de transferir; YoeCell no solicita contraseñas ni códigos de verificación por chat."
+    },
+    {
+      "q": "¿Los teléfonos usados tienen alguna diferencia?",
+      "a": "Los teléfonos usados se revisan uno por uno: batería, pantalla, cámara, carga y conectividad. El estado real se muestra en la ficha de cada equipo y se confirma por WhatsApp."
+    }
+  ]
+}
